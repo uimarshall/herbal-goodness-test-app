@@ -1,0 +1,32 @@
+{
+	"name": "herbal-goodness-test-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"client-install": "npm install --prefix client",
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"test": "mocha"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/uimarshall/herbal-goodness-test-app.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/uimarshall/herbal-goodness-test-app/issues"
+	},
+	"homepage": "https://github.com/uimarshall/herbal-goodness-test-app#readme",
+	"dependencies": {
+		"concurrently": "^5.1.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"http-status-codes": "^1.4.0",
+		"mongoose": "^5.9.10"
+	}
+}
