@@ -9,7 +9,7 @@ const connectDb = require("./config/dbConn");
 dotenv.config({ path: "./config/.env" });
 
 // Connect to Database
-// connectDb();
+connectDb();
 const app = express();
 
 // MIDDLEWARE
