@@ -16,12 +16,12 @@ const Sidebar = () => {
 							</Link>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<Link class="nav-link" to="/orders">
 								<span className="mr-2">
 									<i class="fas fa-shopping-cart" />
 								</span>
 								Orders
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</div>

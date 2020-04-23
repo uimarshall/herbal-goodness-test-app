@@ -28,7 +28,7 @@ class Login extends Component {
 	};
 	render() {
 		return (
-			<div className="row">
+			<div className="row login">
 				<div className="col-md-6 mx-auto">
 					<div className="card">
 						<div className="card-body">
@@ -71,7 +71,7 @@ class Login extends Component {
 					</div>
 					<p className="signup">
 						Don't have an account?{" "}
-						<Link to="/register">
+						<Link to="/signup">
 							<span>Sign up!</span>
 						</Link>
 					</p>

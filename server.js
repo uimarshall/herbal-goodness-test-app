@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 const dotenv = require("dotenv");
 
 const routes = require("./routes/api/users");
@@ -16,6 +17,8 @@ const app = express();
 
 // Body Parser
 app.use(express.json());
+// Enable Cors
+app.use(cors());
 
 // Routes
 app.use("/api/users", routes);

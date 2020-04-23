@@ -9,17 +9,17 @@ const Navbar = () => {
 					Herbal Pro
 				</Link>
 
-				{/* <button
+				<button
 					className="navbar-toggler d-lg-none"
 					type="button"
 					data-toggle="collapse"
 					data-target="#collapsibleNavId">
 					<span className="navbar-toggler-icon"></span>
-				</button> */}
+				</button>
 				<div className="collapse navbar-collapse" id="collapsibleNavId">
 					<ul className="navbar-nav mr-auto mt-2 mt-lg-0">
 						<li className="nav-item">
-							<Link className="nav-link" to="/dashboard">
+							<Link className="nav-link nav-menu" to="/dashboard">
 								Dashboard
 							</Link>
 						</li>
@@ -27,12 +27,12 @@ const Navbar = () => {
 
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item">
-							<Link to="/login" className="nav-link">
+							<Link to="/login" className="nav-link nav-menu">
 								Login
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link to="/signup" className="nav-link">
+							<Link to="/signup" className="nav-link nav-menu">
 								Signup
 							</Link>
 						</li>
