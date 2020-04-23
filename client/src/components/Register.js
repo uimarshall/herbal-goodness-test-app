@@ -27,7 +27,7 @@ class Register extends Component {
 	};
 	render() {
 		return (
-			<div className="row">
+			<div className="row register">
 				<div className="col-md-6 mx-auto">
 					<div className="card">
 						<div className="card-body">
