@@ -42,19 +42,22 @@ const Orders = () => {
 		fetchData();
 	});
 
-	const showLoading = () => (loading ? <Preloader /> : "");
 	const showOrders = () => {
-		console.log(orderlist.gateway);
-		return orderlist.map((eachOrder, index) => (
-			<tr key={index}>
-				<td>
-					{eachOrder.customer.first_name} {eachOrder.customer.last_name}
-				</td>
-				<td>{eachOrder.name}</td>
-				<td>{eachOrder.line_items.quantity}</td>
-				<td>{eachOrder.created_at}</td>
-			</tr>
-		));
+		// console.log(orderlist.gateway);
+		if (orderlist) {
+			return orderlist.map((eachOrder, index) => (
+				<tr key={index}>
+					<td>
+						{eachOrder.customer.first_name} {eachOrder.customer.last_name}
+					</td>
+					<td>{eachOrder.name}</td>
+					<td>{eachOrder.line_items.quantity}</td>
+					<td>{eachOrder.created_at}</td>
+				</tr>
+			));
+		} else {
+			return <Preloader />;
+		}
 	};
 
 	return (
@@ -63,7 +66,7 @@ const Orders = () => {
 				<div className="col-md-6">
 					<h5 className="text-right text-danger">Orders Details:</h5>
 				</div>
-				{showLoading()}
+
 				<table className="table table-striped">
 					<thead className="thead-light">
 						<tr>
