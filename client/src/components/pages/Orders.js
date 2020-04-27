@@ -41,9 +41,9 @@ const Orders = () => {
 	useEffect(() => {
 		fetchData();
 	});
+	console.log(orderlist);
 
 	const showOrders = () => {
-		// console.log(orderlist.gateway);
 		if (orderlist) {
 			return orderlist.map((eachOrder, index) => (
 				<tr key={index}>
@@ -51,7 +51,11 @@ const Orders = () => {
 						{eachOrder.customer.first_name} {eachOrder.customer.last_name}
 					</td>
 					<td>{eachOrder.name}</td>
-					<td>{eachOrder.line_items.quantity}</td>
+					<td>
+						{eachOrder.line_items.map((item) => {
+							return item.quantity;
+						})}
+					</td>
 					<td>{eachOrder.created_at}</td>
 				</tr>
 			));
@@ -68,7 +72,7 @@ const Orders = () => {
 				</div>
 
 				<table className="table table-striped">
-					<thead className="thead-light">
+					<thead className="thead-light text-center">
 						<tr>
 							<th>Name of Customer</th>
 							<th>Product Ordered</th>
@@ -76,7 +80,7 @@ const Orders = () => {
 							<th> Date</th>
 						</tr>
 					</thead>
-					<tbody>{showOrders()}</tbody>
+					<tbody className="text-center">{showOrders()}</tbody>
 				</table>
 			</div>
 		</div>
